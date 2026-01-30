@@ -1,0 +1,19 @@
+<?php
+include "koneksi.php";
+session_start();
+
+$result = mysqli_query($conn, "SELECT * FROM produk");
+?>
+
+<h2>Produk Camille</h2>
+
+<div class="produk">
+<?php while($p = mysqli_fetch_assoc($result)){ ?>
+  <div class="card">
+    <img src="img/<?= $p['image'] ?>">
+    <h4><?= $p['name'] ?></h4>
+    <p>Rp <?= number_format($p['price']) ?></p>
+    <a href="cart.php?add=<?= $p['id'] ?>">Tambah ke Cart</a>
+  </div>
+<?php } ?>
+</div>
