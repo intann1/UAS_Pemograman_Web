@@ -3,31 +3,58 @@
 <head>
 <title>Checkout</title>
 <style>
-    body{ font-family:Arial; background:#fff3fa; }
-    .box{ width:400px; margin:auto; padding:20px; background:white; border-radius:10px; margin-top:40px; }
-    input,select{ width:100%; padding:10px; margin:5px 0; border:1px solid #ccc; border-radius:5px; }
-    button{ padding:10px; width:100%; background:#ff69a6; border:none; border-radius:5px; color:white; }
+body{
+  font-family:Arial;
+  background:#fff3fa;
+}
+.box{
+  width:400px;
+  margin:auto;
+  margin-top:40px;
+  padding:20px;
+  background:white;
+  border-radius:10px;
+}
+input, select{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+button{
+  padding:10px;
+  width:100%;
+  background:#ff69a6;
+  border:none;
+  border-radius:5px;
+  color:white;
+}
 </style>
 </head>
+
 <body>
 
 <div class="box">
 <h2>Checkout</h2>
-<form>
-    <label>Nama Pembeli</label>
-    <input type="text" required>
 
-    <label>Alamat</label>
-    <input type="text" required>
+<form method="POST" action="pembayaran.php">
 
-    <label>Metode Pembayaran</label>
-    <select>
-        <option>COD</option>
-        <option>Transfer Bank</option>
-        <option>E-Wallet</option>
-    </select>
+<label>Nama Pembeli</label>
+<input type="text" name="nama" required>
 
-    <button>Bayar Sekarang</button>
+<label>Alamat</label>
+<input type="text" name="alamat" required>
+
+<label>Metode Pembayaran</label>
+<select name="metode">
+  <option value="COD">COD</option>
+  <option value="Transfer">Transfer Bank</option>
+  <option value="E-Wallet">E-Wallet</option>
+</select>
+
+<button type="submit">Bayar Sekarang</button>
+
 </form>
 </div>
 
