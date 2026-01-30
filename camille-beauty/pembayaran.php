@@ -15,10 +15,11 @@ $total  = $_POST['total'];
 
 <?php if($metode == "Transfer"): ?>
     <h3>Scan QR untuk Transfer</h3>
-    <img src="qris.jpeg" width="200">
+    <img src="img/qris.jpeg" width="200">
 <?php elseif($metode == "E-Wallet"): ?>
     <h3>Scan QR E-Wallet</h3>
-    <img src="qris.jpeg" width="200">
+    <img src="img/qris.jpeg" width="200">
 <?php else: ?>
     <p>Silakan bayar di tempat (COD)</p>
 <?php endif; ?>
+
